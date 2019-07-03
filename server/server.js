@@ -1,7 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const server = express();
 
-//controllers here
+//imports for routes
+const CharSheet = require("./router/overseer")
+//routes
+server.use("/example", CharSheet)
 
 var randomMessage = [
     "Hello World",
