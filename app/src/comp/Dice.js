@@ -1,28 +1,28 @@
 import React, { Component } from 'react'
-import "./dice.css"
+import "../sass/dice.sass"
 
 export default class Dice extends Component {
-    state = {
+state = {
         result: "press button to roll die"
-    }
-    render() {
+        }
+render() {
     var rollOneHundred = ()=> {let roll = Math.floor(Math.random() * 100) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
     var rollTwenty = ()=> {let roll = Math.floor(Math.random() * 20) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
     var rollTwelve = ()=> {let roll = Math.floor(Math.random() * 12) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
     var rollTen = ()=> {let roll = Math.floor(Math.random() * 10) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
     var rollEight = ()=> {let roll = Math.floor(Math.random() * 8) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
     var rollFour = ()=> {let roll = Math.floor(Math.random() * 4) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
     var rollTwo = ()=> {let roll = Math.floor(Math.random() * 2) +1;
-            console.log(`Rolled a ${roll}`); this.setState({result: roll})}
-    
+        console.log(`Rolled a ${roll}`); this.setState({result: roll})}
+
 return (
-    <>
+        <div className="rollTable">
 <div className="rollButtons">
 <button
 className="rollButton"
@@ -60,10 +60,9 @@ onClick={rollTwo}>
 2
 </button>
 </div>
-<div>
-    Result<br/>
-    {this.state.result}
+<div className="result">
+{this.state.result}
 </div>
-</>
+</div>
 )}
 }
