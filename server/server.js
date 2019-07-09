@@ -1,7 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const server = express();
 
-//controllers here
+//middleware
+const helmet = require('helmet');
+const cors = require('cors');
+server.use(helmet());
+server.use(cors());
+//imports for routes
+const CharSheet = require("./router/sheet")
+//routes
+server.use("/example", CharSheet)
 
 var randomMessage = [
     "Hello World",
