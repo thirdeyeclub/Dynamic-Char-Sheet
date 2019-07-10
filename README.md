@@ -1,4 +1,4 @@
-# Dynamic-Char-Sheet
+# Dynamic-Character-Sheet
 A Dynmaic Charater Sheet Creator
 (with a dice roller)
 
