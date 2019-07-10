@@ -33,8 +33,9 @@ var message = randomMessage[Math.floor(Math.random() * randomMessage.length)];
         console.log(
         `*\n
         ${message}\n
-        🚀  Server is running at http://localhost:${process.env.PORT}/ \n
-        TIME IS: ${now}`
+        TIME IS: ${now}\n
+        🚀  Server is running at http://localhost:${process.env.PORT}/ 
+        `
         );
     });
     } else {
